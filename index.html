@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+<!-- my CSS -->
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+      <title>BELAJAR WEBSITE</title>
+    </head>
+
+    <body id="home" class="scrollspy">
+      <!-- nav -->
+      <div class="navbar-fixed">
+        <nav class="grey darken-3">
+          <div class="container">
+            <div class="nav-wrapper">
+              <a href="#home" class="brand-logo">MNF</a>
+              <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+               
+                <li><a href="#services">Materi</a></li>
+                <li><a href="#contact">Kontak Saya</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+
+<!-- Sidenav -->
+<ul class="sidenav" id="mobile-nav">
+  
+  <li><a href="">Materi</a></li>
+  <li><a href="">Kontak Saya</a></li> 
+</ul>
+
+
+<!-- slider -->
+<div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="img/slider/24.jpg"> <!-- random image -->
+        <div class="caption left-align">
+          <h3 class="light grey-text text-lighten-4">Mappatunru Production</h3>
+          <h5 class="light grey-text text-lighten-4">Salamaki To Pada Salama</h5>
+        </div>
+      </li>
+      <li>
+        <img src="img/slider/23.jpg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3 class="light grey-text text-darken-4">Mappatunru Production</h3>
+          <h5 class="light grey-text text-darken-4">Taro Ada Taro Gau</h5>
+        </div>
+      </li>
+      <li>
+        <img src="img/slider/28.jpg"> <!-- random image -->
+        <div class="caption right-align">
+          <h3 class="light white-text text-darken-4">Mappatunru Production</h3>
+          <h5 class="light white-text text-darken-4">Makkiade' Na Malempu'</h5>
+        </div>
+      </li>
+    </ul>
+</div>
+
+
+
+    <!-- Servis -->
+    <section id="services" class="services grey lighten-3 scrollspy">
+      <div class="container">
+        <div class="row">
+          <h3 class="light center grey-text text-darken-3">Materi</h3>
+          <div class="col m12 s12">
+            <div class="card-panel center ">
+              <i class="material-icons medium">laptop_windows</i>
+              <h5>Pertemuan 9 Basis Data</h5>
+              <p>Tulisan Mengenai "Transaksi DBMS (Requirements ACID)"</p>
+              <h5 class=" grey-text text-darken-3 left-align">Transaksi DBMS (Requirements ACID)</h5>
+              <p class="left-align">
+               Transaksi dalam konteks DBMS, adalah unit kerja logis dan independen yang dilakukan untuk mengakses (membaca), membuat atau mengubah (memperbaharui/menghapus) informasi dalam sistem manajemen database. Sementara transaksi adalah unit kerja yang paling dasar dan sederhana; itu juga membawa banyak kerumitan dalam suatu sistem.
+              </p>
+              <p class="left-align">
+                Menjalankan banyak transaksi pada kumpulan data yang sama, dapat menyebabkan data menjadi tidak konsisten atau bisa dibilang kurangnya akurasi data. Integritas data itu sendiri dapat dikompromikan; kelengkapan data juga tidak dijamin.
+              </p>
+              <p class="left-align">
+                Untuk mengatasi masalah tersebut dan untuk memastikan konsistensi database dipertahankan sebelum dan sesudah transaksi, properti ACID diperkenalkan. ACID adalah akronim yang diturunkan dari Atomicity, Consistency, Isolation dan Durability.
+              </p>
+
+              <h5 class=" grey-text text-darken-3 left-align">Properti Transaksi</h5>
+              <p class="left-align">
+                Atomicity : Jika semua operasi pada sebuah transaksi sukses maka transaksi dianggap sukses, jika salahsatu  operasi pada suatu transaksi gagal maka transaksi dianggap gagal
+              </p>
+              <p class="left-align">
+                Consistency : Eksekusi sebuah transaksi secara terisolasi bertujuan untuk menjaga konsistensi database.
+              </p>
+              <p class="left-align">
+                Isolation : Meskipun ada beberapa transaksi yang berlangsung bersamaan, masing-masing transaksi tidak boleh mengetahui transaksi lain yang sedang berlangsung. Hasil transaksi sementara harus disembunyikan dari transaksi lain yang sedang berlangsung.
+              </p>
+              <p class="left-align">
+                Durability : Setelah sebuah transaksi sukses dilakukan, perubahan-perubahan yang dibuatnya terhadap database bersifat permanen, bahkan jika terjadi kegagalan sistem
+              </p>
+
+
+              <h5 class=" grey-text text-darken-3 left-align">Jalur/Status Transaksi</h5>
+              <p class="left-align">
+                Active : Dalam status ini, transaksi sedang dijalankan. Ini adalah status awal setiap transaksi.
+              </p>
+              <p class="left-align">
+                Partially Committed : Ketika sebuah transaksi menjalankan operasi akhirnya, ia dikatakan berada dalam status partially committed.
+              </p>
+               <p class="left-align">
+                Failed : Transaksi dikatakan dalam keadaan gagal jika salah satu pemeriksaan yang dilakukan oleh sistem pemulihan database gagal. Transaksi yang gagal tidak dapat melanjutkan lebih jauh.
+               </p>
+
+               <p class="left-align">
+                Aborted : Jika salah satu pemeriksaan gagal dan transaksi telah mencapai status gagal, maka manajer pemulihan akan mengembalikan semua operasi tulisnya pada database untuk mengembalikan database ke keadaan semula sebelum transaksi dijalankan. Transaksi di pada bagian ini disebut aborted. Modul pemulihan database dapat memilih salah satu dari dua operasi setelah transaksi dibatalkan, yaitu :
+               </p>
+               <p class="left-align">1. Mulailah kembali transaksi </p>
+               <p class="left-align">2. Hentikan transaksi </p>
+              <p class="left-align">
+                Committed : Jika sebuah transaksi menjalankan semua operasinya dengan sukses, maka disebut dengan committed. Semua efeknya sekarang ditetapkan secara permanen pada sistem database.
+              </p>
+
+              <p class="left-align">
+                <img src="img/clients/state.jpg" >
+              </p>
+
+              <h5 class=" grey-text text-darken-3 left-align">Contoh Kasus</h5>
+
+              <p class="left-align">
+               Arga mentransfer uang dari rekening bank nya ke rekening teman-nya yaitu Anto, maka rangkaian operasinya akan seperti ini: 
+              </p>
+              <p class="left-align">
+                1. Baca saldo akun Arga
+              </p>
+              <p class="left-align">
+                2. Kurangi jumlah dari saldo Arga
+              </p>
+              <p class="left-align">
+                3. Tulis sisa saldo ke akun Arga
+              </p>
+              <p class="left-align">
+                4. Baca saldo akun Anto
+              </p>
+              <p class="left-align">
+                5. Tambahkan jumlah tersebut ke saldo Budi
+              </p>
+              <p class="left-align">
+                6. Tulis saldo baru yang diperbarui ke akun Budi
+              </p>
+
+
+
+              <p class="left-align">
+                Transaksi untuk transfer $50 dari account Arga ke account Anto:
+              </p>
+              <p class="left-align">
+                1. read(A)
+              </p>
+              <p class="left-align">
+                2. A := A – 50
+              </p>
+              <p class="left-align">
+                3. write(A)
+              </p>
+              <p class="left-align">
+                4. read(B)
+              </p>
+              <p class="left-align">
+                5. B := B + 50
+              </p>
+              <p class="left-align">
+                6. write(B)
+              </p>
+
+
+              <p class="left-align">
+                Masalah utama yang dapat terjadi selama transaksi adalah bahwa transaksi dapat gagal sebelum menyelesaikan semua operasi di set. Hal ini dapat terjadi karena listrik mati, sistem crash, dll. Ini adalah masalah serius yang dapat membuat database dalam keadaan tidak konsisten. Asumsikan bahwa transaksi gagal setelah operasi ketiga (lihat contoh di atas) maka jumlahnya akan dipotong dari akun Aarga tetapi Anto tidak akan menerimanya.
+              </p>
+              <p class="left-align">
+                Untuk menangani masalah tersebut kita perlu memahami properti database ACID. Masing-masing dari empat komponen ACID berkontribusi pada kemampuan transaksi untuk memastikan integritas data.
+              </p>
+            
+          
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    
+<!-- Kontak Saya -->
+        <section id="contact" class="contact grey lighten-3 scrollspy">
+          <div class="container">
+            <h3 class="light grey-text text-darken-3 center">Kontak Saya</h3>
+            <div class="row">
+              <div class="col m6 s12 ">
+              <div class="card-panel grey darken-2 center white-text">
+                <i class="material-icons medium">email</i>
+                <h5>Email</h5>
+                <p>naufal77febriantama@gmail.com</p>
+
+              </div>
+              <ul class="collection with-header">
+                <li class="collection-header"><h5>INFO UMUM</h5></li>
+                <li class="collection-item">Muh. Naufal Febriantama</li>
+                <li class="collection-item">D121181021</li>
+                <li class="collection-item">Teknik Informatika</li>
+              </ul>
+              </div>
+              <div class="col m6 s12">
+              <div class="card-panel center ">
+              <img class="activator"src="img/portfolio/instagram.png">
+              <h6><a href="https://www.instagram.com/naufalfebriantama/">Instagram</a></h6>
+              </div>
+              <div class="card-panel center small">
+             <img class="activator" src="img/portfolio/facebook.png">
+              <h6><a href="https://www.facebook.com/naufalfebriantama.alfariz?ref=bookmarks">Facebook</a></h6>
+              </div>
+           
+            </div>
+            
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="grey darken-2 white-text center">
+          <p>Teknik Informatika UNHAS. Copyright 2020.</p>
+        </footer>
+
+
+
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+
+      <script>
+        const sideNav = document.querySelectorAll('.sidenav');
+        M.Sidenav.init(sideNav);
+
+        const slider =document.querySelectorAll('.slider');
+        M.Slider.init(slider, {
+          indicators: false,
+          height: 500,
+          transition: 600,
+          interval: 3000
+        });
+
+        const parallax = document.querySelectorAll('.parallax');
+        M.Parallax.init(parallax);
+
+        const materialbox = document.querySelectorAll('.materialboxed');
+        M.Materialbox.init(materialbox);
+
+        const scroll = document.querySelectorAll('.scrollspy');
+        M.ScrollSpy.init(scroll, {
+          scrollOffset: 50
+        })
+
+       
+
+       
+      </script>
+
+    </body>
+  </html>
+        
